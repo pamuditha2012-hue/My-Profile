@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samurdhi Pamuditha Silva - Assistant Project Manager, Systems Expert & Web Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#e63946', // Vibrant Red
+                            darkred: '#9b2226', // Deep Red
+                            black: '#0a0a0a', // True Black background
+                            gray: '#1a1a1a', // Lighter black/dark gray for cards
+                            light: '#f1faee'  // Off-white for text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f1faee;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e63946; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9b2226; 
+        }
+
+        /* Glow effect for cards */
+        .glow-card {
+            transition: all 0.3s ease;
+            border: 1px solid #1a1a1a;
+        }
+        .glow-card:hover {
+            border-color: #e63946;
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Glitch effect for main title */
+        .glitch-wrapper {
+            position: relative;
+        }
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+        }
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 red;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 blue;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(79px, 9999px, 86px, 0); }
+            20% { clip: rect(15px, 9999px, 12px, 0); }
+            40% { clip: rect(2px, 9999px, 89px, 0); }
+            60% { clip: rect(66px, 9999px, 98px, 0); }
+            80% { clip: rect(100px, 9999px, 20px, 0); }
+            100% { clip: rect(69px, 9999px, 1px, 0); }
+        }
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            20% { clip: rect(3px, 9999px, 49px, 0); }
+            40% { clip: rect(32px, 9999px, 76px, 0); }
+            60% { clip: rect(59px, 9999px, 18px, 0); }
+            80% { clip: rect(19px, 9999px, 72px, 0); }
+            100% { clip: rect(16px, 9999px, 23px, 0); }
+        }
+
+        /* Abstract Background Elements */
+        .bg-shape {
+            position: absolute;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-brand-red selection:text-white">
+
+    <div class="bg-shape bg-brand-red w-96 h-96 rounded-full top-0 left-[-100px] mix-blend-screen"></div>
+    <div class="bg-shape bg-brand-darkred w-[500px] h-[500px] rounded-full bottom-0 right-[-200px] mix-blend-screen hidden md:block"></div>
+
+    <nav class="fixed w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-brand-gray transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tighter hover:text-brand-red transition-colors">
+                        P<span class="text-brand-red">.</span>S
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-gray-300 hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#experience" class="text-gray-300 hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#projects" class="text-gray-300 hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Web Projects</a>
+                        <a href="#skills" class="text-gray-300 hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#education" class="text-gray-300 hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</a>
+                        <a href="#certifications" class="text-gray-300 hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Certifications</a>
+                        <a href="#contact" class="border border-brand-red text-brand-red hover:bg-brand-red hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all inline-flex items-center gap-2"><i class="fas fa-phone-alt text-xs"></i> Let's Talk</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-brand-gray focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu panel -->
+        <div class="md:hidden hidden bg-brand-black border-b border-brand-gray" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#experience" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Web Projects</a>
+                <a href="#skills" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#education" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Education</a>
+                <a href="#certifications" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Certifications</a>
+                <a href="#contact" class="text-brand-red font-bold block px-3 py-2 rounded-md text-base">Contact</a>
+                <a href="tel:+94702551322" class="text-white bg-brand-red/20 border border-brand-red/40 px-3 py-2 rounded-md text-base flex items-center gap-2 font-mono"><i class="fas fa-phone-alt text-brand-red text-sm"></i> +94 70 255 1322</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative px-4">
+        <div class="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
+            
+            <div class="w-full md:w-3/5 space-y-6 z-10 text-center md:text-left">
+                <p class="text-brand-red font-mono text-lg font-semibold tracking-wider uppercase">Systems Expert &amp; Web Designer</p>
+                <div class="glitch-wrapper">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight glitch" data-text="Samurdhi Pamuditha Silva">
+                        Samurdhi Pamuditha Silva
+                    </h1>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-bold text-gray-400">
+                    Assistant Project Manager &amp; Web Designer.
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl leading-relaxed mx-auto md:mx-0">
+                    With over <strong class="text-brand-red">16+ years</strong> of experience in System Management and digital solutions, I specialize in Modern Web Design &amp; Development, Technical Support, Cloud Computing, AI integrations, and SQL databases. Certified in CEH, CCNA, and ACE (MCNA).
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                    <a href="#projects" class="bg-brand-red hover:bg-brand-darkred text-white px-7 py-3 rounded-md font-bold transition-all shadow-[0_0_15px_rgba(230,57,70,0.4)] flex items-center justify-center gap-2">
+                        View Web Projects <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#experience" class="border border-brand-gray hover:border-brand-red hover:bg-brand-gray text-white px-6 py-3 rounded-md font-medium transition-all flex items-center justify-center gap-2">
+                        <i class="fas fa-briefcase"></i> Experience
+                    </a>
+                    <a href="https://www.linkedin.com/in/samurdhi-pamuditha-silva-364024103/" target="_blank" class="border border-brand-gray hover:border-brand-red hover:bg-brand-gray text-white px-6 py-3 rounded-md font-medium transition-all flex items-center justify-center gap-2">
+                        <i class="fab fa-linkedin text-xl"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-2/5 flex justify-center z-10 relative mt-12 md:mt-0">
+                <!-- Abstract visual representation instead of a photo -->
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+                    <div class="absolute inset-0 bg-brand-red rounded-full opacity-20 animate-pulse-slow blur-xl"></div>
+                    <div class="absolute inset-4 border-2 border-brand-red rounded-full border-dashed animate-[spin_10s_linear_infinite]"></div>
+                    <div class="absolute inset-8 border border-gray-600 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-8xl text-brand-red opacity-80 drop-shadow-[0_0_15px_rgba(230,57,70,0.8)]">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll down indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-gray-500 hover:text-brand-red transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-brand-black relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">About Me</h2>
+                <div class="h-px bg-brand-gray flex-grow"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                    <p>
+                        I am an <span class="text-brand-red font-semibold">Assistant Project Manager (SBS)</span>, Systems Expert, and Creative Web Designer with a passion for building robust IT infrastructure and modern, high-converting digital web experiences. 
+                    </p>
+                    <p>
+                        Backed by over 16+ years of industry experience, I bridge the gap between complex technical operations, strategic project execution, and elegant web solutions. My expertise spans across Modern Web Design &amp; UI/UX, Cloud Computing, Network Security (CEH, CCNA), AI integrations, and comprehensive Technical Support.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-clock text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">16+ Years</h3>
+                        <p class="text-sm text-gray-400">System Management</p>
+                    </div>
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-laptop-code text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">Web Design</h3>
+                        <p class="text-sm text-gray-400">Modern &amp; Responsive</p>
+                    </div>
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-shield-alt text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">CEH &amp; CCNA</h3>
+                        <p class="text-sm text-gray-400">Security &amp; Networking</p>
+                    </div>
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-cloud text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">Cloud</h3>
+                        <p class="text-sm text-gray-400">Computing &amp; MCNA</p>
+                    </div>
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-database text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">AI &amp; SQL</h3>
+                        <p class="text-sm text-gray-400">Data Management</p>
+                    </div>
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-globe text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">Live Sites</h3>
+                        <p class="text-sm text-gray-400">5+ Featured Portals</p>
+                    </div>
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-headset text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">Tech Support</h3>
+                        <p class="text-sm text-gray-400">Enterprise Level</p>
+                    </div>
+                    <div class="bg-brand-gray p-6 rounded-lg glow-card flex flex-col items-center justify-center text-center">
+                        <i class="fas fa-tasks text-3xl text-brand-red mb-3"></i>
+                        <h3 class="text-xl font-bold text-white mb-1">SBS</h3>
+                        <p class="text-sm text-gray-400">Project Management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Experience</h2>
+                <div class="h-px bg-brand-gray flex-grow"></div>
+            </div>
+
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-brand-gray before:to-transparent">
+
+                <!-- Job 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-black bg-brand-red text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                        <i class="fas fa-briefcase text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-gray p-6 rounded-xl glow-card">
+                        <div class="flex flex-col xl:flex-row justify-between xl:items-center mb-2 gap-2">
+                            <h3 class="font-bold text-xl text-white">Assistant Project Manager (SBS Sector)</h3>
+                            <span class="text-brand-red font-mono text-sm bg-brand-black/50 px-3 py-1 rounded-full w-fit">Jan 2024 - Present</span>
+                        </div>
+                        <h4 class="text-gray-400 font-medium mb-1">Softwatch Infosys Pvt Ltd.</h4>
+                        <p class="text-gray-500 text-xs mb-4 flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka (Hybrid)
+                        </p>
+                        <ul class="text-gray-300 text-sm space-y-3">
+                            <li class="pl-4 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-brand-red before:rounded-full"><strong class="text-white">Banking Systems:</strong> Managed Core Banking Systems for SAMURDHI PRAJAMULA Bank ensuring 99.9% HA. Overseeing Cloud Infrastructure optimization and SQL Database Administration.</li>
+                            <li class="pl-4 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-brand-red before:rounded-full"><strong class="text-white">Cooperative Solutions:</strong> Managing Payroll, POS, and Member Registration systems for Multi-Purpose Cooperative Societies, alongside end-to-end SQL and application support.</li>
+                            <li class="pl-4 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-brand-red before:rounded-full"><strong class="text-white">Healthcare IT:</strong> Overseeing the implementation and maintenance of Hospital Management Systems.</li>
+                            <li class="pl-4 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-brand-red before:rounded-full"><strong class="text-white">Technical Integration:</strong> Leveraging AI tools for workflow modernization and executing system performance tuning.</li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-800 flex flex-wrap gap-2">
+                            <span class="text-xs bg-black px-2 py-1 rounded text-gray-400 border border-gray-800 hover:border-brand-red transition-colors cursor-default">Technical Support</span>
+                            <span class="text-xs bg-black px-2 py-1 rounded text-gray-400 border border-gray-800 hover:border-brand-red transition-colors cursor-default">AI Integrations</span>
+                            <span class="text-xs bg-black px-2 py-1 rounded text-gray-400 border border-gray-800 hover:border-brand-red transition-colors cursor-default">SQL Databases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-black bg-brand-gray text-brand-red shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 transition-colors group-hover:bg-brand-red group-hover:text-white">
+                        <i class="fas fa-tools text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-gray p-6 rounded-xl glow-card">
+                        <div class="flex flex-col xl:flex-row justify-between xl:items-center mb-2 gap-2">
+                            <h3 class="font-bold text-xl text-white">System Support Engineer</h3>
+                            <span class="text-gray-400 font-mono text-sm border border-gray-700 bg-brand-black/50 px-3 py-1 rounded-full w-fit">Nov 2015 - Apr 2024</span>
+                        </div>
+                        <h4 class="text-gray-400 font-medium mb-1">Softwatch Infosys Pvt Ltd.</h4>
+                        <p class="text-gray-500 text-xs mb-4 flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i> Colombo 3
+                        </p>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li class="flex items-start gap-2"><span class="text-brand-red mt-0.5"><i class="fas fa-check-circle"></i></span> Successfully managed banking and payroll system integrations for large-scale clients.</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-red mt-0.5"><i class="fas fa-check-circle"></i></span> Expertly utilized SQL Server Management Studio for database troubleshooting and system optimization.</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-red mt-0.5"><i class="fas fa-check-circle"></i></span> Ensured 24/7 system availability and resolved complex technical issues for various business sectors.</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-red mt-0.5"><i class="fas fa-check-circle"></i></span> Collaborated with cross-functional teams to improve system reliability and security.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-black bg-brand-gray text-gray-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 transition-colors group-hover:text-brand-red border-gray-800">
+                        <i class="fas fa-server text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-gray p-6 rounded-xl glow-card">
+                        <div class="flex flex-col xl:flex-row justify-between xl:items-center mb-2 gap-2">
+                            <h3 class="font-bold text-xl text-white">System Administrator</h3>
+                            <span class="text-gray-500 font-mono text-sm border border-gray-800 bg-brand-black/30 px-3 py-1 rounded-full w-fit">Nov 2010 - Dec 2015</span>
+                        </div>
+                        <h4 class="text-gray-400 font-medium mb-1">Softwatch Infosys Pvt Ltd.</h4>
+                        <p class="text-gray-500 text-xs flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i> Colombo 3 (On-site)
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                <div class="flex items-center gap-4 flex-grow">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Web Projects</h2>
+                    <div class="h-px bg-brand-gray flex-grow"></div>
+                </div>
+                <span class="text-brand-red font-mono text-sm tracking-wider uppercase font-semibold">Live Works &amp; Design Portfolio</span>
+            </div>
+            
+            <p class="text-gray-400 text-lg max-w-3xl mb-14 leading-relaxed">
+                A selection of modern, responsive, and performance-optimized websites crafted for diverse industries — including international restaurant e-commerce, corporate IT solutions, airport hospitality, private travel tours, and social community organizations.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: Helarasa -->
+                <div class="bg-brand-gray rounded-xl p-7 glow-card border border-gray-800 flex flex-col justify-between group hover:border-brand-red transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-150 duration-500"></div>
+                    
+                    <div>
+                        <!-- Browser Bar Mockup -->
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-gray-800/80">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                                <span class="ml-2 font-mono text-xs text-gray-500">helarasa.com</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Live Site
+                            </span>
+                        </div>
+
+                        <!-- Category & Title -->
+                        <div class="mb-4">
+                            <span class="text-xs font-mono text-brand-red uppercase tracking-wider font-semibold">Restaurant &amp; E-Commerce (Japan)</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 group-hover:text-brand-red transition-colors">Hela Rasa</h3>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Premier Japan Sri Lankan restaurant &amp; online food ordering platform delivering authentic cuisine, short eats, and kottu across Japan. Features a rich visual menu, cool delivery ordering flow, and cross-cultural brand presentation.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Modern digital menu showcase &amp; online order flow</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Multi-language localization for Japanese &amp; diaspora clients</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Mobile-first UI with fast responsive loading times</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800/80 mb-6">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">UI/UX Design</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Food Ordering</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Responsive Web</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">SEO Optimized</span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://helarasa.com/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-brand-red text-white border border-gray-700 hover:border-brand-red py-3 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(230,57,70,0.4)]">
+                            <span>Visit helarasa.com</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: ITLK Pro Solutions -->
+                <div class="bg-brand-gray rounded-xl p-7 glow-card border border-gray-800 flex flex-col justify-between group hover:border-brand-red transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-150 duration-500"></div>
+                    
+                    <div>
+                        <!-- Browser Bar Mockup -->
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-gray-800/80">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                                <span class="ml-2 font-mono text-xs text-gray-500">itlkprosolutions.com</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Live Site
+                            </span>
+                        </div>
+
+                        <!-- Category & Title -->
+                        <div class="mb-4">
+                            <span class="text-xs font-mono text-brand-red uppercase tracking-wider font-semibold">Corporate &amp; IT Services</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 group-hover:text-brand-red transition-colors">ITLK Pro Solutions</h3>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Professional corporate portal showcasing enterprise IT solutions, premium technical services, and consultation offerings. Built with clean modern typography, sleek tech aesthetics, and high conversion inquiry pathways.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>High-performance corporate IT brand presence</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Service showcase with structured lead generation</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Dark/modern tech aesthetic matching IT industry standards</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800/80 mb-6">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Corporate Portal</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">IT Services</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Lead Capture</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Performance</span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://itlkprosolutions.com/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-brand-red text-white border border-gray-700 hover:border-brand-red py-3 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(230,57,70,0.4)]">
+                            <span>Visit itlkprosolutions.com</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Golden Luck Villa -->
+                <div class="bg-brand-gray rounded-xl p-7 glow-card border border-gray-800 flex flex-col justify-between group hover:border-brand-red transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-150 duration-500"></div>
+                    
+                    <div>
+                        <!-- Browser Bar Mockup -->
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-gray-800/80">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                                <span class="ml-2 font-mono text-xs text-gray-500">goldenluckvilla.com</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Live Site
+                            </span>
+                        </div>
+
+                        <!-- Category & Title -->
+                        <div class="mb-4">
+                            <span class="text-xs font-mono text-brand-red uppercase tracking-wider font-semibold">Hospitality &amp; Eco Villa</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 group-hover:text-brand-red transition-colors">Golden Luck Villa</h3>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Airport transit hotel and eco villa website located near Katunayake Airport (CMB / BIA). Features AC room displays, rooftop terrace views, village cuisine, free Ceylon cinnamon tea, and instant transit booking assistance.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Room visual showcase &amp; direct reservation inquiries</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Proximity guide &amp; airport transit info for tourists</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Touch-friendly mobile navigation with instant WhatsApp contact</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800/80 mb-6">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Hospitality UI</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Direct Booking</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Airport Transit</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Mobile First</span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://goldenluckvilla.com/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-brand-red text-white border border-gray-700 hover:border-brand-red py-3 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(230,57,70,0.4)]">
+                            <span>Visit goldenluckvilla.com</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: My Sri Lanka Journey -->
+                <div class="bg-brand-gray rounded-xl p-7 glow-card border border-gray-800 flex flex-col justify-between group hover:border-brand-red transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-150 duration-500"></div>
+                    
+                    <div>
+                        <!-- Browser Bar Mockup -->
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-gray-800/80">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                                <span class="ml-2 font-mono text-xs text-gray-500">mysrilankajourney.com</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Live Site
+                            </span>
+                        </div>
+
+                        <!-- Category & Title -->
+                        <div class="mb-4">
+                            <span class="text-xs font-mono text-brand-red uppercase tracking-wider font-semibold">Tours &amp; Travel Booking</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 group-hover:text-brand-red transition-colors">My Sri Lanka Journey</h3>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Tailor-made tour exploration platform featuring licensed chauffeur guides, airport transfers, and private holiday packages across Sigiriya, Kandy, Ella, Yala, and tropical beaches.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Interactive tour itinerary browsing &amp; destination guide</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Chauffeur service booking &amp; airport transfer requests</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Rich visual storytelling highlighting Sri Lanka's top spots</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800/80 mb-6">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Travel Portal</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Tour Booking</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Itinerary UX</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Responsive UI</span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://www.mysrilankajourney.com/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-brand-red text-white border border-gray-700 hover:border-brand-red py-3 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(230,57,70,0.4)]">
+                            <span>Visit mysrilankajourney.com</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Pahanweta -->
+                <div class="bg-brand-gray rounded-xl p-7 glow-card border border-gray-800 flex flex-col justify-between group hover:border-brand-red transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-150 duration-500"></div>
+                    
+                    <div>
+                        <!-- Browser Bar Mockup -->
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-gray-800/80">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                                <span class="ml-2 font-mono text-xs text-gray-500">pahanweta.com</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Live Site
+                            </span>
+                        </div>
+
+                        <!-- Category & Title -->
+                        <div class="mb-4">
+                            <span class="text-xs font-mono text-brand-red uppercase tracking-wider font-semibold">Social Service &amp; Community</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 group-hover:text-brand-red transition-colors">PAHANWETA</h3>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            "The Light of the Life" – A digital platform for an esteemed social service organization dedicated to lighting lives across Sri Lanka through community welfare, donations, and humanitarian projects.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Community outreach projects &amp; campaign showcases</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Donation information &amp; transparent social work updates</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-gray-400">
+                                <i class="fas fa-check text-brand-red mt-0.5 shrink-0"></i>
+                                <span>Clean, accessible typography with reader-focused UI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800/80 mb-6">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Non-Profit UI</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Social Service</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Community Outreach</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-400 border border-gray-800">Content Platform</span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://pahanweta.com/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-brand-red text-white border border-gray-700 hover:border-brand-red py-3 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(230,57,70,0.4)]">
+                            <span>Visit pahanweta.com</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Call To Action Card: Web Design Inquiries -->
+                <div class="bg-gradient-to-br from-brand-gray via-brand-gray to-brand-black rounded-xl p-7 glow-card border border-brand-red/30 flex flex-col justify-between group hover:border-brand-red transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-brand-red/5 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red text-2xl mb-6">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <span class="text-xs font-mono text-brand-red uppercase tracking-wider font-semibold">Have A Project In Mind?</span>
+                        <h3 class="text-2xl font-bold text-white mt-1 mb-3">Custom Web Design &amp; Development</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Need a bespoke website tailored for your business, e-commerce store, tourism agency, or corporate brand? Let's build a fast, secure, and modern web presence that converts visitors into customers.
+                        </p>
+                        <div class="space-y-2 mb-6 text-xs text-gray-400">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-bolt text-brand-red"></i>
+                                <span>Fast Turnaround &amp; 100% Mobile Optimization</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-shield-alt text-brand-red"></i>
+                                <span>Cyber Security Standards &amp; SEO Best Practices</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a href="https://wa.me/94702551322" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-3 px-4 rounded-lg font-bold text-sm transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Chat on WhatsApp: +94 70 255 1322</span>
+                        </a>
+                        <a href="tel:+94702551322" class="w-full inline-flex items-center justify-center gap-2 bg-black/60 hover:bg-brand-red text-white border border-gray-700 hover:border-brand-red py-2.5 px-4 rounded-lg font-medium text-sm transition-all">
+                            <i class="fas fa-phone-alt text-xs"></i>
+                            <span>Call Directly: +94 70 255 1322</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Technical Arsenal</h2>
+                <div class="h-px bg-brand-gray flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Web Design & UI/UX -->
+                <div class="bg-brand-gray rounded-xl p-8 border border-gray-800 hover:border-brand-red transition-colors duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-laptop-code text-brand-red"></i> Web Design &amp; UI
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Responsive Design</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">UI / UX</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">HTML5 &amp; CSS3</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Tailwind CSS</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">WordPress / CMS</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">SEO &amp; Performance</span>
+                    </div>
+                </div>
+
+                <!-- Infrastructure & Security -->
+                <div class="bg-brand-gray rounded-xl p-8 border border-gray-800 hover:border-brand-red transition-colors duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-shield-virus text-brand-red"></i> Security &amp; Network
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">CEH (Ethical Hacking)</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">CCNA</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">ACE (MCNA)</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Firewalls</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & Data -->
+                <div class="bg-brand-gray rounded-xl p-8 border border-gray-800 hover:border-brand-red transition-colors duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-cloud-meatball text-brand-red"></i> Cloud &amp; AI
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Cloud Computing</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Artificial Intelligence</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">SQL Server</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Database Admin</span>
+                    </div>
+                </div>
+
+                <!-- Operations -->
+                <div class="bg-brand-gray rounded-xl p-8 border border-gray-800 hover:border-brand-red transition-colors duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-cogs text-brand-red"></i> Systems &amp; Support
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">System Management</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Technical Support</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">Project Management</span>
+                        <span class="px-3.5 py-1.5 bg-black text-gray-300 rounded-md text-sm font-mono border border-gray-800 hover:text-brand-red hover:border-brand-red transition-colors">ITIL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-24 bg-brand-black relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Education</h2>
+                <div class="h-px bg-brand-gray flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Education Item 1 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-red flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-3 py-1 rounded-full">2020 – 2021</span>
+                            <i class="fas fa-graduation-cap text-2xl text-gray-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">NextGen Campus</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-2">Diploma of Education, Cyber Security & Ethical Hacking ( DCSE )</h4>
+                        <p class="text-gray-400 text-xs mb-4">Endorsed by ABE, UK</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">AI Automation</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Artificial Intelligence (AI)</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Cyber Security</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Ethical Hacking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-darkred flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-gray-400 bg-black/40 border border-gray-800 px-3 py-1 rounded-full">2013 – 2014</span>
+                            <i class="fas fa-satellite-dish text-2xl text-gray-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">City and Guilds Telecommunication Engineering (SLTTC)</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Diploma, Telecommunication Engineering</h4>
+                        
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Telecommunications</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Network Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-red flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-gray-400 bg-black/40 border border-gray-800 px-3 py-1 rounded-full">2009 – 2010</span>
+                            <i class="fas fa-microchip text-2xl text-gray-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">ESOFT Metro Campus</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Diploma, Computer Hardware Engineering & Network Administrator</h4>
+                        
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Hardware Engineering</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Network Administration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 4 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-darkred flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-gray-400 bg-black/40 border border-gray-800 px-3 py-1 rounded-full">2005 – 2006</span>
+                            <i class="fas fa-laptop-code text-2xl text-gray-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">France Sri Lanka Institute of Computer Technology</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Diploma, Computer and Information Sciences, General</h4>
+                        
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Computer Science</span>
+                            <span class="text-xs bg-black px-2.5 py-1 rounded text-gray-300 border border-gray-800">Information Technology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Licenses & Certifications</h2>
+                <div class="h-px bg-brand-gray flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Cert 1: Fortinet NSE 1 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-red flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-shield-alt text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">Fortinet</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Fortinet Network Security Expert Level 1</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Certified Associate</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Foundational network security concepts, threat landscape awareness, and fundamental perimeter defense mechanisms.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-building text-brand-red"></i>
+                        <span>Issued by Fortinet</span>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Fortinet NSE 2 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-darkred flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-shield-virus text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">Fortinet</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Fortinet Network Security Expert Level 2</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Certified Associate</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Advanced cyber threat intelligence, security architecture principles, and infrastructure protection strategies.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-building text-brand-red"></i>
+                        <span>Issued by Fortinet</span>
+                    </div>
+                </div>
+
+                <!-- Cert 3: CCNAv7 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-red flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-network-wired text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">Cisco</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Cisco Certified Network Associate (CCNAv7)</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Cisco Networking Academy</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Network fundamentals, IP connectivity, switching, routing, security essentials, and network automation.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-graduation-cap text-brand-red"></i>
+                        <span>Issued by Cisco Networking Academy</span>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Aviatrix ACE -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-darkred flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-cloud text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">Aviatrix</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Aviatrix Certified Engineer</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Multi-Cloud Network Associate</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Multi-cloud network design, security architecture, and multi-cloud operational visibility across AWS, Azure, and GCP.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-certificate text-brand-red"></i>
+                        <span>Issued by Aviatrix</span>
+                    </div>
+                </div>
+
+                <!-- Cert 5: ICSI CyberSecurity Essentials -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-red flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-lock text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">DefensityOne</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">ICSI | CyberSecurity Essentials</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">DefensityOne</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Core cybersecurity principles, threat prevention, vulnerability assessment, and digital asset defense.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-user-shield text-brand-red"></i>
+                        <span>Issued by DefensityOne</span>
+                    </div>
+                </div>
+
+                <!-- Cert 6: CISSP Udemy -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-darkred flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-user-check text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">Udemy</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Certified Information Systems Security Professional (CISSP)</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Udemy Certification</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Enterprise information security management, risk governance, access control, and security operations.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-award text-brand-red"></i>
+                        <span>Issued by Udemy</span>
+                    </div>
+                </div>
+
+                <!-- Cert 7: CEH v10 -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-red flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-user-secret text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">uCertify</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Certified Ethical Hacker (CEH v10)</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">uCertify Certification</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Penetration testing methodologies, network vulnerability scanning, system hacking countermeasures, and security auditing.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-key text-brand-red"></i>
+                        <span>Issued by uCertify</span>
+                    </div>
+                </div>
+
+                <!-- Cert 8: NDG Linux Essentials -->
+                <div class="bg-brand-gray p-6 sm:p-8 rounded-xl glow-card border-l-4 border-l-brand-darkred flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fab fa-linux text-3xl text-gray-500"></i>
+                            <span class="text-xs font-mono text-brand-red bg-black/40 border border-brand-red/30 px-2.5 py-1 rounded-full">Cisco / NDG</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">NDG Linux Essentials</h3>
+                        <h4 class="text-brand-red font-medium text-sm mb-3">Cisco Networking Academy</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Linux operating system fundamentals, open-source concepts, command-line operations, and system administration.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-terminal text-brand-red"></i>
+                        <span>Issued by Cisco Networking Academy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-brand-gray relative">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <p class="text-brand-red font-mono mb-4">What's Next?</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Get In Touch</h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+                Whether you are looking to build a modern website, discuss system architecture, or explore a project collaboration, feel free to reach out directly via Call, WhatsApp, or Email!
+            </p>
+            
+            <!-- Direct Phone & WhatsApp CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                <a href="tel:+94702551322" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-red hover:bg-brand-darkred text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-[0_0_15px_rgba(230,57,70,0.3)] hover:shadow-[0_0_25px_rgba(230,57,70,0.6)]">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+94 70 255 1322</span>
+                </a>
+                <a href="https://wa.me/94702551322" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>WhatsApp Chat</span>
+                </a>
+            </div>
+
+            <!-- Social & Contact Channels -->
+            <div class="mt-14 flex justify-center items-center gap-8">
+                <a href="tel:+94702551322" class="text-gray-400 hover:text-brand-red transition-colors transform hover:-translate-y-1 duration-300" title="Call: +94 70 255 1322">
+                    <i class="fas fa-phone-alt text-3xl"></i>
+                    <span class="sr-only">Call +94702551322</span>
+                </a>
+                <a href="https://wa.me/94702551322" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-emerald-400 transition-colors transform hover:-translate-y-1 duration-300" title="WhatsApp: +94 70 255 1322">
+                    <i class="fab fa-whatsapp text-3xl"></i>
+                    <span class="sr-only">WhatsApp</span>
+                </a>
+                <a href="https://www.linkedin.com/in/samurdhi-pamuditha-silva-364024103/" target="_blank" class="text-gray-400 hover:text-brand-red transition-colors transform hover:-translate-y-1 duration-300" title="LinkedIn">
+                    <i class="fab fa-linkedin text-3xl"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="mailto:pamuditha@example.com" class="text-gray-400 hover:text-brand-red transition-colors transform hover:-translate-y-1 duration-300" title="Email">
+                    <i class="fas fa-envelope text-3xl"></i>
+                    <span class="sr-only">Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black border-t border-gray-800 py-8 text-center">
+        <p class="text-gray-400 text-sm font-mono mb-3 flex items-center justify-center gap-3 flex-wrap">
+            <span class="inline-flex items-center gap-1.5">
+                <i class="fas fa-phone-alt text-brand-red"></i>
+                <a href="tel:+94702551322" class="hover:text-brand-red transition-colors">+94 70 255 1322</a>
+            </span>
+            <span class="text-gray-600">|</span>
+            <span class="inline-flex items-center gap-1.5">
+                <i class="fab fa-whatsapp text-emerald-400"></i>
+                <a href="https://wa.me/94702551322" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">WhatsApp</a>
+            </span>
+        </p>
+        <p class="text-gray-500 text-sm font-mono">
+            Designed & Built for Samurdhi Pamuditha Silva<br>
+            <span class="text-brand-red">© 2026</span> All Rights Reserved
+        </p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Navbar blur and shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg', 'shadow-brand-red/5');
+            } else {
+                nav.classList.remove('shadow-lg', 'shadow-brand-red/5');
+            }
+        });
+
+        // Simple typing effect for console-like feel in hero
+        document.addEventListener('DOMContentLoaded', () => {
+            // Optional: Add intersection observer for fade-in animations on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section > div').forEach((el) => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
